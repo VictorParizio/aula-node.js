@@ -11,7 +11,15 @@ const pessoas = require('./modulo')
 console.log(pessoas)
 */
 
+/* Exemplo 3
 const dados = require('./modulo')
 console.log(dados.nomes)
 console.log(dados.cidades)
 console.log(dados.cidades[1])
+*/
+
+const { nomes, cidades, texto, adicionar } = require('./modulo')
+console.log(nomes)
+console.log(cidades)
+console.log(texto)
+console.log(adicionar(10,20))

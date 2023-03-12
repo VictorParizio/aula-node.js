@@ -11,10 +11,19 @@ let nomes = ['João', 'Ana', 'Carlos']
 module.exports = nomes
 */
 
+/* Exemplo 3
 const nomes = ['João', 'Ana', 'Carlos']
 const cidades = ['Lisboa', 'Porto', 'Faro']
 
-module.exports = {
-    nomes,
-    cidades
+module.exports = {nomes, cidades}
+*/
+
+const nomes = ['João', 'Ana', 'Carlos']
+const cidades = ['Lisboa', 'Porto', 'Faro']
+const texto = "Olá Mundo!"
+
+function adicionar(a, b) {
+    return a + b
 }
+
+module.exports = { nomes, cidades, texto, adicionar }
