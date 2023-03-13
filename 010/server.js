@@ -18,6 +18,12 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200
             break;
 
+        case '/sobre':
+            res.setHeader('Location', '/about')
+            res.statusCode = 301
+            res.end()
+            break;
+
         default:
             html_file = '010/views/404.html'
             res.statusCode = 404
