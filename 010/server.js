@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200
             break;
 
-        case '/sobre/teste':
+        case '/sobre':
             res.setHeader('Location', '/about')
             res.statusCode = 301
             res.end()
@@ -42,5 +42,5 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(3000, 'localhost', () => {
-    console.log('servidor iniciado')
+    console.log('servidor iniciado novamente')
 })
