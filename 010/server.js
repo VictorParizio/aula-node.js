@@ -1,5 +1,6 @@
 const http = require('http')
 const fs = require('fs')
+const lodash = require('lodash')
 
 const server = http.createServer((req, res) => {
 
@@ -13,6 +14,7 @@ const server = http.createServer((req, res) => {
             html_file = '010/views/index.html'
             res.statusCode = 200
             break;
+
         case '/about':
             html_file = '010/views/about.html'
             res.statusCode = 200
@@ -43,4 +45,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000, 'localhost', () => {
     console.log('servidor iniciado novamente')
+    console.log(lodash.random(0, 100))
 })

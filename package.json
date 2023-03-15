@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/VictorParizio/aula-node.js/issues"
   },
-  "homepage": "https://github.com/VictorParizio/aula-node.js#readme"
+  "homepage": "https://github.com/VictorParizio/aula-node.js#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
