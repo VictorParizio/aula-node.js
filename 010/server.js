@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200
             break;
 
-        case '/sobre':
+        case '/sobre/teste':
             res.setHeader('Location', '/about')
             res.statusCode = 301
             res.end()
