@@ -8,11 +8,22 @@ app.listen(3000)
 
 // routes
 app.get('/', (req, res) => {
-    // res.send('<h1>Teste</h1>')
-    res.sendFile('./views/home.html', { root: __dirname })
+    res.status(200).sendFile('./views/home.html', { root: __dirname })
 })
 
 app.get('/about', (req, res) => {
-    // res.send('<h1>About</h1>')
-    res.sendFile('./views/about.html', { root: __dirname })
+    res.status(200).sendFile('./views/about.html', { root: __dirname })
+})
+
+app.get('/services', (req, res) => {
+    res.status(200).sendFile('./views/services.html', { root: __dirname })
+})
+
+app.get('/sobre', (req, res) => {
+    res.status(302).redirect('/about')
+})
+
+app.use((req, res) => {
+    // res.sendFile('./views/404.html', { root: __dirname })
+    res.status(404).sendFile('./views/404.html', { root: __dirname })
 })
