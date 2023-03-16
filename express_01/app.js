@@ -12,26 +12,17 @@ app.listen(3000)
 
 // routes
 app.get('/', (req, res) => {
-    res.sendFile('./views/home.html', { root: __dirname })
+    res.render('home', { title: "Página Inicial" })
 })
 
 app.get('/about', (req, res) => {
-    res.sendFile('./views/about.html', { root: __dirname })
+    res.render('about', { title: "Sobre" })
 })
 
 app.get('/services', (req, res) => {
-    res.sendFile('./views/services.html', { root: __dirname })
-})
-
-app.get('/sobre', (req, res) => {
-    res.redirect('/about')
-})
-
-//ejs
-app.get('/teste-ejs', (req, res) => {
-    res.render('inicio')
+    res.render('services', { title: "Serviços" })
 })
 
 app.use((req, res) => {
-    res.status(404).sendFile('./views/404.html', { root: __dirname })
+    res.status(404).render('404', { title: "Erro!" })
 })
