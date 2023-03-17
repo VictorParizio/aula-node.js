@@ -1,4 +1,5 @@
 const express = require('express')
+var morgan = require('morgan')
 
 // cria uma aplicação express
 const app = express()
@@ -11,15 +12,8 @@ app.set('views', './express_01/views')
 app.listen(3000)
 
 // middleware
-app.use((req, res, next) => {
-
-    console.log('Novo pedido')
-    console.log('Host:', req.hostname)
-    console.log('Path:', req.path)
-    console.log('Method:', req.method)
-    next()
-
-})
+app.use(express.static('./express_01/public'))
+app.use(morgan('O método é:'))
 
 // routes
 app.get('/', (req, res) => {
