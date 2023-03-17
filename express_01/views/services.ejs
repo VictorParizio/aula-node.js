@@ -15,7 +15,19 @@
     </div>
 
     <h1>Services</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque ea, facere omnis ex ipsam, tempora deserunt, repellendus maxime libero fugit excepturi consectetur cupiditate autem dolores illo esse inventore. Sunt, quaerat.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed quia exercitationem cupiditate pariatur aliquid aut vitae soluta, tenetur laudantium fuga velit perspiciatis. Labore amet hic officiis, ratione tempora dolorum.</p>
+
+    <% if(servicos.length > 0){ %>
+
+        <% servicos.forEach(servico => {%>
+            <div>
+                <h3><%= servico.titulo_servico %></h3>
+                <p><%= servico.descricao %></p>
+                <hr>
+            </div>
+        <% }) %>
+
+    <% } else { %>
+        <p>Não foram encontrados servicos.</p>
+    <% } %>
 </body>
 </html>
