@@ -10,6 +10,17 @@ app.set('views', './express_01/views')
 // escuta os requests
 app.listen(3000)
 
+// middleware
+app.use((req, res, next) => {
+
+    console.log('Novo pedido')
+    console.log('Host:', req.hostname)
+    console.log('Path:', req.path)
+    console.log('Method:', req.method)
+    next()
+
+})
+
 // routes
 app.get('/', (req, res) => {
     res.render('home', { title: "Página Inicial" })
